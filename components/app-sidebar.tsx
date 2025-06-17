@@ -12,11 +12,14 @@ import {
   IconFolder,
   IconHelp,
   IconInnerShadowTop,
+  IconBrandSketch,
   IconListDetails,
   IconReport,
   IconSearch,
   IconSettings,
   IconUsers,
+  IconPackage,
+  IconShoppingCart,
 } from "@tabler/icons-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -42,23 +45,23 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Categories",
+      url: "/dashboard/categories",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
+      title: "Products",
+      url: "/dashboard/products",
+      icon: IconPackage,
     },
     {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
+      title: "Sales",
+      url: "/dashboard/sales",
+      icon: IconShoppingCart,
     },
     {
       title: "Team",
@@ -117,34 +120,24 @@ const data = {
   navSecondary: [
     {
       title: "Settings",
-      url: "#",
+      url: "/dashboard/settings",
       icon: IconSettings,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
     },
   ],
   documents: [
     {
-      name: "Data Library",
-      url: "#",
+      name: "Today Sales",
+      url: "/dashboard/report/todaysales",
       icon: IconDatabase,
     },
     {
-      name: "Reports",
-      url: "#",
+      name: "Weekly Sales",
+      url: "/dashboard/report/weeklysales",
       icon: IconReport,
     },
     {
-      name: "Word Assistant",
-      url: "#",
+      name: "Monthly Sales",
+      url: "/dashboard/report/monthlysales",
       icon: IconFileWord,
     },
   ],
@@ -161,8 +154,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
               <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <IconBrandSketch className="!size-5" />
+                <span className="text-base font-semibold">Motamkn ERP & POS</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
